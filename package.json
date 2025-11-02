@@ -9,7 +9,10 @@
     "lint": "next lint",
     "export": "next build",
     "netlify:deploy": "netlify deploy",
-    "netlify:deploy:prod": "netlify deploy --prod"
+    "netlify:deploy:prod": "netlify deploy --prod",
+    "export:pdf": "node scripts/export-pdf.js",
+    "export:images": "node scripts/export-images.js",
+    "export:all": "npm run export:pdf && npm run export:images"
   },
   "dependencies": {
     "framer-motion": "^11.3.24",

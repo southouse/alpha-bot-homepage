@@ -10,19 +10,24 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#4F46E5', // 보라/인디고 계열
-          dark: '#4338CA',
-          light: '#6366F1',
+          DEFAULT: '#00D4FF', // 밝은 시안 (LuxAlgo 스타일)
+          dark: '#00A8CC',
+          light: '#33E0FF',
         },
         accent: {
-          DEFAULT: '#06B6D4', // 청록색
-          dark: '#0891B2',
-          light: '#22D3EE',
+          DEFAULT: '#00FFD1', // 청록색
+          dark: '#00CCB3',
+          light: '#66FFE0',
         },
         dark: {
-          DEFAULT: '#0F172A',
-          lighter: '#1E293B',
-          light: '#334155',
+          DEFAULT: '#000000', // 순수 검은색
+          lighter: '#0A0A0A',
+          light: '#1A1A1A',
+        },
+        gray: {
+          DEFAULT: '#808080',
+          dark: '#4A4A4A',
+          light: '#B3B3B3',
         }
       },
       backgroundImage: {

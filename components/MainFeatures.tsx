@@ -8,7 +8,7 @@ const mainFeatures = [
   {
     title: '백테스트 성과',
     subtitle: '2020년 4월 ~ 2025년 1월',
-    description: '초기 시드: $10,000 (약 1,000만 원)\n최종 자산: $191,963 (약 2억 2천만 원)\n\n총수익률: 2220% | 승률: 86.1%',
+    description: '초기 자본: $10,000 (약 1,000만원)\n최종 자산: $191,963 (약 2억 2천만원)\n\n총 수익률: 2220% | 승률: 86.1%',
     stats: [
       { label: '수익률', value: '2220%' },
       { label: '승률', value: '86.1%' },
@@ -18,14 +18,14 @@ const mainFeatures = [
   },
   {
     title: '실제 계좌 성과',
-    subtitle: '검증된 실전 수익',
-    description: '사례 A: 35일간 자동매매, 총 수익률 11.55%\n사례 B: 72일간 자동매매, 총 수익률 26.27%\n\n시장 상황(상승/하락/횡보)에 구애받지 않고\n매달 꾸준히 복리 수익을 쌓아갑니다.',
+    subtitle: '검증된 실전 트레이딩',
+    description: '사례 A: 35일간 자동매매, 11.55% 수익률\n사례 B: 72일간 자동매매, 26.27% 수익률\n\n시장 상황에 관계없이 일관된 복리 수익.',
     stats: [
       { label: '사례 A', value: '11.55%' },
       { label: '사례 B', value: '26.27%' },
-      { label: '안정성', value: '우상향' }
+      { label: '안정성', value: '높음' }
     ],
-    image: '�'
+    image: '💰'
   },
 ];
 
@@ -34,36 +34,37 @@ export default function MainFeatures() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section ref={ref} className="py-24 px-4 bg-gradient-to-b from-dark to-dark-lighter">
-      <div className="container mx-auto">
+    <section ref={ref} className="py-32 px-6 bg-black">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">
-              숫자로 증명된 알파봇의 성과
+          <h2 className="text-5xl md:text-6xl font-black mb-6 text-white">
+            실제 트레이더,
+            <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mt-2">
+              실제 성과
             </span>
           </h2>
-          <p className="text-xl text-gray-300 mt-6">
-            큰 하락 없이 꾸준히 우상향하는 수익 곡선
+          <p className="text-xl text-gray-400 mt-6 max-w-3xl mx-auto">
+            백테스팅과 실제 트레이딩 계좌에서 검증된 결과
           </p>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-24">
           {mainFeatures.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12`}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16`}
             >
-              <div className="flex-1">
-                <div className="relative p-12 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 group hover:border-accent/50 transition-all duration-300">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex-1 w-full">
+                <div className="relative p-16 rounded-2xl bg-dark-lighter/30 border border-white/5 group hover:border-primary/20 transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10 flex items-center justify-center text-9xl">
                     {feature.image}
@@ -71,21 +72,21 @@ export default function MainFeatures() {
                 </div>
               </div>
 
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              <div className="flex-1 text-center lg:text-left">
+                <h3 className="text-4xl md:text-5xl font-black mb-4 text-white">
                   {feature.title}
                 </h3>
-                <p className="text-lg text-accent mb-6">
+                <p className="text-xl text-primary mb-8 font-semibold">
                   {feature.subtitle}
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed whitespace-pre-line mb-6">
+                <p className="text-lg text-gray-400 leading-relaxed whitespace-pre-line mb-10">
                   {feature.description}
                 </p>
                 {feature.stats && (
-                  <div className="grid grid-cols-3 gap-4 mt-6">
+                  <div className="grid grid-cols-3 gap-6">
                     {feature.stats.map((stat, idx) => (
-                      <div key={idx} className="p-4 rounded-xl bg-dark/50 border border-primary/20">
-                        <div className="text-2xl font-bold text-accent mb-1">{stat.value}</div>
+                      <div key={idx} className="p-6 rounded-xl bg-dark-lighter/50 border border-white/5">
+                        <div className="text-3xl font-black text-primary mb-2">{stat.value}</div>
                         <div className="text-sm text-gray-400">{stat.label}</div>
                       </div>
                     ))}
@@ -100,20 +101,19 @@ export default function MainFeatures() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-24 p-12 rounded-3xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/30"
+          className="text-center mt-32 p-16 rounded-2xl bg-dark-lighter/30 border border-white/10"
         >
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            이제, 감정 소모는 멈추고 AI에게 맡기세요.
+          <h3 className="text-4xl md:text-5xl font-black mb-6 text-white">
+            지금 바로 스마트한 트레이딩 시작하기
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            24시간 365일, 당신이 자는 순간에도 알파봇은 기계적으로 수익을 만들어냅니다.<br />
-            지금 바로 알파봇을 거래소에 연동하고, 감정 없는 투자를 시작하세요.
+          <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto">
+            AI 기반 전략을 사용하는 15,000명 이상의 트레이더와 함께하세요. 30일 무료 체험으로 최고의 자동매매를 경험하세요.
           </p>
-          <button className="px-12 py-5 bg-gradient-to-r from-primary to-accent rounded-full text-white font-bold text-xl hover:shadow-2xl hover:shadow-primary/50 transition-all transform hover:scale-105 mb-4">
-            지금 바로 자동매매 연동하기
+          <button className="px-12 py-5 bg-primary text-black rounded-lg font-bold text-xl hover:bg-primary-light hover:shadow-xl hover:shadow-primary/30 transition-all transform hover:scale-105 mb-4">
+            30일 무료 체험 시작하기
           </button>
-          <p className="text-sm text-gray-400 mt-4">
-            버튼을 클릭하여 문의를 남겨주시면, 트레이딩뷰 지표 설정 및 거래소 연동 방법을 상세히 안내해 드립니다.
+          <p className="text-sm text-gray-500 mt-6">
+            버튼을 클릭하여 AI 기반 트레이딩 전략을 시작하세요
           </p>
         </motion.div>
       </div>
