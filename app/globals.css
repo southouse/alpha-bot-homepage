@@ -4,13 +4,14 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 5, 10, 30;
-  --background-end-rgb: 20, 60, 150;
+  --background-start-rgb: 8, 58, 82; /* #083a52 어두운 톤 */
+  --background-end-rgb: 46, 196, 255; /* #2ec4ff 밝은 톤 */
+  --main-color: 15, 113, 157; /* #0f719d */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #050A1E;
+  background: #05111a;
 }
 
 @layer utilities {

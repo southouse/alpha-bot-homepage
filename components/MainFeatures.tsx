@@ -44,11 +44,11 @@ export default function MainFeatures() {
         >
           <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
             실제 트레이더,
-            <span className="block bg-gradient-to-r from-accent-light via-cyan to-mint bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(74,144,226,0.5)] mt-2">
+            <span className="block bg-gradient-to-r from-accent-shimmer via-cyan-electric to-mint-shimmer bg-clip-text text-transparent drop-shadow-[0_0_45px_rgba(127,229,255,0.9)] mt-2">
               실제 성과
             </span>
           </h2>
-          <p className="text-xl text-gray-400 mt-6 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
             백테스팅과 실제 트레이딩 계좌에서 검증된 결과
           </p>
         </motion.div>
@@ -63,9 +63,9 @@ export default function MainFeatures() {
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16`}
             >
               <div className="flex-1 w-full">
-              <div className="relative p-16 rounded-2xl bg-dark-lighter/20 backdrop-blur-sm border border-accent/20 group hover:border-accent/50 transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/15 to-primary/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 rounded-2xl bg-accent/0 group-hover:bg-accent/5 blur-2xl transition-all duration-300"></div>                  <div className="relative z-10 flex items-center justify-center text-9xl">
+              <div className="relative p-16 rounded-2xl bg-dark-lighter/20 backdrop-blur-sm border border-primary-bright/40 group hover:border-cyan-electric/70 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-bright/35 to-accent-shimmer/25 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 rounded-2xl bg-cyan-bright/0 group-hover:bg-cyan-electric/20 blur-2xl transition-all duration-300"></div>                  <div className="relative z-10 flex items-center justify-center text-9xl">
                     {feature.image}
                   </div>
                 </div>
@@ -75,19 +75,19 @@ export default function MainFeatures() {
                 <h3 className="text-4xl md:text-5xl font-black mb-4 text-white">
                   {feature.title}
                 </h3>
-                <p className="text-xl text-accent-light mb-8 font-semibold">
+                <p className="text-xl text-cyan-electric mb-8 font-semibold drop-shadow-[0_0_20px_rgba(56,212,255,0.6)]">
                   {feature.subtitle}
                 </p>
-                <p className="text-lg text-gray-400 leading-relaxed whitespace-pre-line mb-10">
+                <p className="text-lg text-gray-300 leading-relaxed whitespace-pre-line mb-10">
                   {feature.description}
                 </p>
                 {feature.stats && (
                   <div className="grid grid-cols-3 gap-6">
                     {feature.stats.map((stat, idx) => (
-                      <div key={idx} className="relative group p-6 rounded-xl bg-dark-lighter/30 backdrop-blur-sm border border-accent/20 hover:border-accent/40 transition-all duration-300">
-                        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <div className="relative text-2xl font-black text-accent drop-shadow-[0_0_20px_rgba(0,180,255,0.6)] mb-2">{stat.value}</div>
-                        <div className="relative text-sm text-gray-400">{stat.label}</div>
+                      <div key={idx} className="relative group p-6 rounded-xl bg-dark-lighter/30 backdrop-blur-sm border border-primary-bright/40 hover:border-cyan-electric/70 transition-all duration-300">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-bright/30 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div className="relative text-2xl font-black text-cyan-electric drop-shadow-[0_0_30px_rgba(56,212,255,1)] mb-2">{stat.value}</div>
+                        <div className="relative text-sm text-gray-300">{stat.label}</div>
                       </div>
                     ))}
                   </div>
@@ -101,17 +101,17 @@ export default function MainFeatures() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="relative text-center mt-32 p-16 rounded-2xl bg-dark-lighter/20 backdrop-blur-sm border border-accent/30 overflow-hidden"
+          className="relative text-center mt-32 p-16 rounded-2xl bg-dark-lighter/20 backdrop-blur-sm border border-primary-bright/50 overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-transparent"></div>
-          <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-accent/10 rounded-full blur-[100px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-bright/25 via-accent-shimmer/15 to-transparent"></div>
+          <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-cyan-electric/20 rounded-full blur-[120px]"></div>
           <h3 className="relative text-4xl md:text-5xl font-black mb-6 text-white">
             지금 바로 스마트한 트레이딩 시작하기
           </h3>
-          <p className="relative text-xl text-gray-400 mb-10 max-w-3xl mx-auto">
+          <p className="relative text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
             AI 기반 전략을 사용하는 15,000명 이상의 트레이더와 함께하세요. 30일 무료 체험으로 최고의 자동매매를 경험하세요.
           </p>
-          <button className="relative px-10 py-4 bg-gradient-to-r from-accent-dark to-purple text-white rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-purple/70 hover:from-purple hover:to-accent-dark transition-all transform hover:scale-105 mb-4 overflow-hidden group">
+          <button className="relative px-10 py-4 bg-gradient-to-r from-primary via-primary-bright to-cyan-bright text-white rounded-lg font-bold text-lg shadow-lg shadow-cyan-bright/50 hover:shadow-2xl hover:shadow-cyan-electric/80 hover:from-cyan-bright hover:to-accent-shimmer transition-all transform hover:scale-105 mb-4 overflow-hidden group">
             <span className="relative z-10">30일 무료 체험 시작하기</span>
           </button>
           <p className="relative text-sm text-gray-500 mt-6">

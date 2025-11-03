@@ -35,23 +35,23 @@ function FeatureCard({ feature, index }: { feature: typeof features[0], index: n
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
-      className="group relative p-10 rounded-xl bg-dark-lighter/30 backdrop-blur-sm border border-accent/20 hover:border-accent/50 transition-all duration-300"
+      className="group relative p-10 rounded-xl bg-dark-lighter/30 backdrop-blur-sm border border-primary-bright/40 hover:border-cyan-electric/80 transition-all duration-300"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      <div className="absolute inset-0 rounded-xl bg-accent/0 group-hover:bg-accent/5 blur-2xl transition-all duration-300"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-bright/30 via-accent-shimmer/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 rounded-xl bg-cyan-bright/0 group-hover:bg-cyan-electric/20 blur-2xl transition-all duration-300"></div>
       <div className="relative text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
         {feature.icon}
       </div>
-      <h3 className="relative text-2xl font-black mb-2 text-white group-hover:text-accent transition-all duration-300">
+      <h3 className="relative text-2xl font-black mb-2 text-white group-hover:text-cyan-bright transition-all duration-300">
         {feature.title}
       </h3>
-      <p className="relative text-base text-accent mb-4 font-semibold">
+      <p className="relative text-base text-cyan-electric mb-4 font-semibold drop-shadow-[0_0_15px_rgba(56,212,255,0.5)]">
         {feature.subtitle}
       </p>
-      <p className="relative text-gray-400 leading-relaxed text-base">
+      <p className="relative text-gray-300 leading-relaxed text-base">
         {feature.description}
       </p>
-      <button className="relative mt-6 text-accent hover:text-mint font-semibold text-sm transition-colors flex items-center gap-2 group-hover:gap-3 transition-all">
+      <button className="relative mt-6 text-cyan-electric hover:text-accent-shimmer font-semibold text-sm transition-colors flex items-center gap-2 group-hover:gap-3 transition-all drop-shadow-[0_0_10px_rgba(56,212,255,0.6)]">
         자세히 보기 <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
       </button>
     </motion.div>
@@ -73,11 +73,11 @@ export default function Features() {
         >
           <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
             승리하는 전략을 만드는
-            <span className="block bg-gradient-to-r from-accent-light via-cyan to-mint bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(74,144,226,0.5)] mt-2">
+            <span className="block bg-gradient-to-r from-accent-shimmer via-cyan-electric to-mint-shimmer bg-clip-text text-transparent drop-shadow-[0_0_45px_rgba(127,229,255,0.9)] mt-2">
               AI 에이전트
             </span>
           </h2>
-          <p className="text-xl text-gray-400 mt-6 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
             AI 에이전트에게 최고의 트레이딩 전략을 찾아달라고 요청하고, 트레이딩뷰에서 원클릭으로 전략을 복제하고, 알림을 설정하고, 프로처럼 거래를 자동화하세요.
           </p>
         </motion.div>

@@ -36,7 +36,7 @@ export default function Introduction() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-accent-light via-cyan to-mint bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(74,144,226,0.4)]">
+            <span className="bg-gradient-to-r from-accent-shimmer via-cyan-electric to-mint-shimmer bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(127,229,255,0.8)]">
               알파봇의 3단계 자동매매 프로세스
             </span>
           </h2>
@@ -49,10 +49,10 @@ export default function Introduction() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative p-8 rounded-2xl bg-dark-lighter/30 backdrop-blur-sm border border-accent/30 hover:border-accent/60 transition-all duration-300 group"
+              className="relative p-8 rounded-2xl bg-dark-lighter/30 backdrop-blur-sm border border-primary-bright/50 hover:border-cyan-electric/80 transition-all duration-300 group"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/15 to-primary-light/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute inset-0 rounded-2xl bg-accent/0 group-hover:bg-accent/10 blur-2xl transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-bright/35 via-accent-shimmer/20 to-primary-glow/25 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-2xl bg-cyan-bright/0 group-hover:bg-cyan-electric/20 blur-2xl transition-all duration-300"></div>
               
               <div className="relative z-10">
                 <div className="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
@@ -61,7 +61,7 @@ export default function Introduction() {
                 <h4 className="text-2xl font-bold mb-4 text-white">
                   {card.title}
                 </h4>
-                <p className="text-gray-300 leading-relaxed whitespace-pre-line">
+                <p className="text-gray-200 leading-relaxed whitespace-pre-line">
                   {card.description}
                 </p>
               </div>
